@@ -1,0 +1,144 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* resets */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue:hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(223, 47%, 23%);
+    --secondary-font-color:#8a8a8a;
+    --red-hat-display:'Red Hat Display', sans-serif;
+}
+
+body{
+    font-family: var(--red-hat-display);
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--pale-blue);
+    
+}
+p{
+    font-size: 1rem;
+    color: var(--secondary-font-color);
+}
+
+h1{
+    color: var(--desaturated-blue);
+}
+
+/*utlity class */
+.flex{
+    display: flex;
+    gap: 0.8rem;
+}
+
+/* order summary card */
+
+main
+{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-summary-card{
+    max-width: 380px;
+    height: 490px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.order-summary-image{
+    height: 30%;
+    width: 100%;
+}
+
+
+.order-summary{
+    height: 70%;
+    width: 100%;
+    gap: 0rem;
+    flex-direction: column;
+    padding-left: 35px;
+    padding-right: 35px;
+    align-items: center;
+    justify-content:space-evenly;
+    
+}
+
+.order-summary-detail{
+    text-align: center;
+}
+
+.order-plan{
+    align-items: center;
+    gap: 0rem;
+    justify-content:space-between;
+    width: 100%;
+   padding: 10px 15px 10px;
+    background-color: var(--very-pale-blue);
+    border-radius: 10px;
+    
+}
+.annual-plan{
+    flex-direction: column;
+    gap: 0.2rem;
+    
+}
+
+.music-logo{
+    width: 38px;
+}
+
+.annual-plan-title{
+    font-weight: 700;
+    color: var(--desaturated-blue);
+}
+.payment-btn{
+    background-color: var(--bright-blue);
+    border-radius: 10px;
+     color: white;
+     border: none;
+     font-weight: 500;
+    box-shadow:0 12px 3px -3px var(--pale-blue) ;
+    height:35px;
+    width: 100%;
+}
+
+.payment-btn:hover{
+    background-color: hsl(245, 85%, 68%)
+}
+
+a:hover{
+    text-decoration: none;
+    color: hsl(245, 85%, 68%);
+}
+
+.cancel-order-btn:hover{
+    color: var(--desaturated-blue);
+}
+
+
+/* media quries */
+
+@media screen and (max-width: 450px) {
+    
+    body{
+        background-image: url(images/pattern-background-mobile.svg);
+    }
+
+    main{
+        padding: 20px;
+    }
+
+}
